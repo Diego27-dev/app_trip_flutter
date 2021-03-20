@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class GradientBack extends StatelessWidget {
 
-  String title = "Popular";
+  String title = "Go travel";
 
+  GradientBack(this.title);
   @override
   Widget build(BuildContext context) {
 
@@ -31,7 +32,7 @@ class GradientBack extends StatelessWidget {
           fontSize: 30.0
         ),
       ),
-      alignment: Alignment(-0.9, -0.6),
+      alignment: Alignment(-0.7, -0.6),
     );
   }
 
