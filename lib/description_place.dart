@@ -1,48 +1,16 @@
 import 'package:flutter/material.dart';
+import 'star_ranking.dart';
 
+// ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget{
 
   String namePlace;
-  int stars;
   String descriptionPlace;
 
-  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+  DescriptionPlace(this.namePlace, this.descriptionPlace);
 
   @override
   Widget build(BuildContext context) {
-
-    final star_half = Container(
-      margin: EdgeInsets.only(
-        top:323.0, right: 3.0
-      ),
-      child: Icon(
-        Icons.star_half,
-        color: Color(0xFFF2C611),
-        size: 15,
-      ),
-    );
-
-    final star_border = Container(
-      margin: EdgeInsets.only(
-          top:323.0, right: 3.0
-      ),
-      child: Icon(
-        Icons.star_border_outlined,
-        color: Color(0xFFF2C611),
-        size: 15,
-      ),
-    );
-
-    final star = Container (
-      margin: EdgeInsets.only(
-        top: 323.0, right: 3.0
-      ),
-      child: Icon(
-        Icons.star,
-        color: Color(0xFFF2C611),
-        size: 15,
-      ),
-    );
 
     final desciptionText = Container (
       margin: EdgeInsets.only(
@@ -73,15 +41,7 @@ class DescriptionPlace extends StatelessWidget{
             textAlign: TextAlign.left,
           ),
         ),
-        Row(
-          children: [
-            star,
-            star,
-            star,
-            star_half,
-            star_border
-          ],
-        )
+        StarRanking(325.0, 3.0, 0.0, 15)
       ],
     );
 

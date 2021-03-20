@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
 
   String descriptionDummy = '''Ciudad perdida - Cuidad Sagrada - Cuna del Imperio Inca, Machupicchu Ubicado a 2.430 metros de altura en un paraje de gran belleza, en medio de un bosque tropical de montaña, el santuario de Machu Picchu fue probablemente la realización arquitectónica más asombrosa del Imperio Inca en su apogeo.
@@ -19,10 +22,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: Text("App Trip")
-        ),
-        body: new DescriptionPlace("Machu Picchu", 5, descriptionDummy),
+        ),*/
+        body: Stack(
+          children: [
+            ListView(
+              children: [
+                DescriptionPlace("Machu Picchu", descriptionDummy),
+                ReviewList(),
+              ],
+            ),
+            GradientBack(),
+          ],
+        )
       ),
     );
   }
