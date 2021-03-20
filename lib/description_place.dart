@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'star_ranking.dart';
+import 'button_purple.dart';
 
 // ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget{
@@ -8,7 +9,6 @@ class DescriptionPlace extends StatelessWidget{
   String descriptionPlace;
 
   DescriptionPlace(this.namePlace, this.descriptionPlace);
-
   @override
   Widget build(BuildContext context) {
 
@@ -46,9 +46,11 @@ class DescriptionPlace extends StatelessWidget{
     );
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         titleStars,
-        desciptionText
+        desciptionText,
+        ButtonPurple("Navigate")
       ],
     );
   }
